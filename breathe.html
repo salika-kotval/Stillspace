@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StillSpace | Breathing Exercise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="breathe">
+  <div class="floating-shapes" aria-hidden="true">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+    <span class="shape shape-3"></span>
+  </div>
+
+  <div class="app-shell page">
+    <aside class="sidebar glass">
+      <a class="brand" href="dashboard.html">StillSpace</a>
+      <p id="sidebarNickname" class="user-chip">Hi, Friend</p>
+      <nav>
+        <a class="side-link" href="dashboard.html">Dashboard</a>
+        <a class="side-link" href="journal.html">Journal</a>
+        <a class="side-link" href="mood.html">Mood Tracker</a>
+        <a class="side-link active" href="breathe.html">Breathing</a>
+        <a class="side-link" href="profile.html">Profile</a>
+        <button id="logoutBtn" class="side-link logout-btn" type="button">Logout</button>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="panel-top glass">
+        <h1>Breathing Exercise</h1>
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode">Dark</button>
+      </header>
+
+      <section class="breathe-card glass">
+        <h2>Follow the gentle rhythm</h2>
+        <p>Inhale 4s | Hold 4s | Exhale 4s</p>
+
+        <div class="breath-settings">
+          <label for="cycleTarget">Session Cycles</label>
+          <select id="cycleTarget">
+            <option value="3">3 cycles</option>
+            <option value="5">5 cycles</option>
+            <option value="8">8 cycles</option>
+          </select>
+          <p id="cycleProgress" class="small-meta">Cycle 0 / 3</p>
+        </div>
+
+        <div class="breath-progress">
+          <span id="breathProgressFill"></span>
+        </div>
+
+        <div class="breath-visual-wrap">
+          <div id="breathCircle" class="breath-circle">
+            <span id="breathPhase">Inhale</span>
+          </div>
+        </div>
+
+        <p id="breathCounter" class="breath-counter">4</p>
+
+        <div class="button-row">
+          <button id="startBreathBtn" class="btn btn-primary" type="button">Start</button>
+          <button id="pauseBreathBtn" class="btn btn-secondary" type="button">Pause</button>
+          <button id="resetBreathBtn" class="btn btn-secondary" type="button">Reset</button>
+        </div>
+        <p id="breathSessionStatus" class="status-text"></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/breathe.js"></script>
+</body>
+</html>
+
+
+
+
+
+

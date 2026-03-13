@@ -1,0 +1,27 @@
+{
+  "name": "stillspace",
+  "version": "1.0.0",
+  "description": "StillSpace mental wellness web app",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "keywords": [
+    "mental-wellness",
+    "express",
+    "mongodb",
+    "journal",
+    "mood-tracker"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "mongoose": "^8.19.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

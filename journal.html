@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StillSpace | Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="journal">
+  <div class="floating-shapes" aria-hidden="true">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+    <span class="shape shape-3"></span>
+  </div>
+
+  <div class="app-shell page">
+    <aside class="sidebar glass">
+      <a class="brand" href="dashboard.html">StillSpace</a>
+      <p id="sidebarNickname" class="user-chip">Hi, Friend</p>
+      <nav>
+        <a class="side-link" href="dashboard.html">Dashboard</a>
+        <a class="side-link active" href="journal.html">Journal</a>
+        <a class="side-link" href="mood.html">Mood Tracker</a>
+        <a class="side-link" href="breathe.html">Breathing</a>
+        <a class="side-link" href="profile.html">Profile</a>
+        <button id="logoutBtn" class="side-link logout-btn" type="button">Logout</button>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="panel-top glass">
+        <h1>Daily Reflection Journal</h1>
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode">Dark</button>
+      </header>
+
+      <section class="journal-layout">
+        <article class="journal-card glass">
+          <h2>Today's Prompt</h2>
+          <p id="journalPrompt" class="prompt-text">What made you feel calm today?</p>
+          <div class="journal-tools">
+            <p id="journalCharCount" class="small-meta">0 characters</p>
+            <button id="clearDraftBtn" class="small-action-btn" type="button">Clear Draft</button>
+          </div>
+          <textarea id="journalText" rows="10" placeholder="Write your thoughts here..."></textarea>
+          <div class="button-row">
+            <button id="saveJournalBtn" class="btn btn-primary" type="button">Save Entry</button>
+            <button id="analyzeBtn" class="btn btn-secondary" type="button">Analyze with AI</button>
+          </div>
+          <p id="journalStatus" class="status-text"></p>
+          <p class="helper-text">Your draft autosaves in this browser while you write.</p>
+        </article>
+
+        <article class="journal-card glass">
+          <h2>AI Reflection</h2>
+          <p id="aiResponse" class="ai-response">
+            Your supportive reflection will appear here after you click "Analyze with AI".
+          </p>
+        </article>
+      </section>
+
+      <section class="history-card glass">
+        <h2>Recent Entries</h2>
+        <ul id="journalHistory" class="history-list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/prompts.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+

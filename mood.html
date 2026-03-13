@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StillSpace | Mood Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="mood">
+  <div class="floating-shapes" aria-hidden="true">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+    <span class="shape shape-3"></span>
+  </div>
+
+  <div class="app-shell page">
+    <aside class="sidebar glass">
+      <a class="brand" href="dashboard.html">StillSpace</a>
+      <p id="sidebarNickname" class="user-chip">Hi, Friend</p>
+      <nav>
+        <a class="side-link" href="dashboard.html">Dashboard</a>
+        <a class="side-link" href="journal.html">Journal</a>
+        <a class="side-link active" href="mood.html">Mood Tracker</a>
+        <a class="side-link" href="breathe.html">Breathing</a>
+        <a class="side-link" href="profile.html">Profile</a>
+        <button id="logoutBtn" class="side-link logout-btn" type="button">Logout</button>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="panel-top glass">
+        <h1>Mood Tracker</h1>
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode">Dark</button>
+      </header>
+
+      <section class="mood-layout">
+        <article class="mood-card glass">
+          <h2>How are you feeling today?</h2>
+          <div class="mood-buttons">
+            <button class="mood-btn" data-mood="Happy" data-score="5" type="button">
+              <strong>&#128515; Happy</strong>
+              <span class="mood-note">Light, energized, and positive</span>
+            </button>
+            <button class="mood-btn" data-mood="Calm" data-score="4" type="button">
+              <strong>&#128578; Calm</strong>
+              <span class="mood-note">Steady, balanced, and grounded</span>
+            </button>
+            <button class="mood-btn" data-mood="Neutral" data-score="3" type="button">
+              <strong>&#128528; Neutral</strong>
+              <span class="mood-note">Okay, stable, and in-between</span>
+            </button>
+            <button class="mood-btn" data-mood="Sad" data-score="2" type="button">
+              <strong>&#128577; Sad</strong>
+              <span class="mood-note">Low energy and emotionally heavy</span>
+            </button>
+            <button class="mood-btn" data-mood="Stressed" data-score="1" type="button">
+              <strong>&#128534; Stressed</strong>
+              <span class="mood-note">Overloaded, tense, or pressured</span>
+            </button>
+          </div>
+          <button id="saveMoodBtn" class="btn btn-primary" type="button">Save Mood</button>
+          <p id="moodStatus" class="status-text"></p>
+          <p id="moodStreakPage" class="streak-display">Mood Streak: 0 Days</p>
+
+          <div class="insight-grid">
+            <article class="insight-pill">
+              <p class="insight-label">7-Day Average</p>
+              <p id="moodWeeklyAvg" class="insight-value">-</p>
+            </article>
+            <article class="insight-pill">
+              <p class="insight-label">Most Frequent</p>
+              <p id="moodCommon" class="insight-value">-</p>
+            </article>
+            <article class="insight-pill">
+              <p class="insight-label">Last Logged</p>
+              <p id="moodLastLogged" class="insight-value">-</p>
+            </article>
+          </div>
+        </article>
+
+        <article class="mood-card glass">
+          <h2>Mood Trend</h2>
+          <canvas id="moodChart" aria-label="Mood trend chart"></canvas>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/chart.js"></script>
+</body>
+</html>
+
+
+
+
+
+

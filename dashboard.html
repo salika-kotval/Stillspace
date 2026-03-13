@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StillSpace | Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="dashboard">
+  <div class="floating-shapes" aria-hidden="true">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+    <span class="shape shape-3"></span>
+  </div>
+
+  <div class="app-shell page">
+    <aside class="sidebar glass">
+      <a class="brand" href="dashboard.html">StillSpace</a>
+      <p id="sidebarNickname" class="user-chip">Hi, Friend</p>
+      <nav>
+        <a class="side-link active" href="dashboard.html">Dashboard</a>
+        <a class="side-link" href="journal.html">Journal</a>
+        <a class="side-link" href="mood.html">Mood Tracker</a>
+        <a class="side-link" href="breathe.html">Breathing</a>
+        <a class="side-link" href="profile.html">Profile</a>
+        <button id="logoutBtn" class="side-link logout-btn" type="button">Logout</button>
+      </nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="panel-top glass">
+        <h1 id="welcomeTitle">Welcome back to StillSpace</h1>
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle dark mode">Dark</button>
+      </header>
+
+      <section class="dashboard-hero glass">
+        <div>
+          <p class="hero-label">Daily Check-in</p>
+          <h2>Take one gentle minute for yourself</h2>
+          <p class="hero-support">
+            Slow progress still counts. Use this space to observe, write, and reset.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <p id="todayDate" class="meta-date"></p>
+          <a class="meta-pill" href="breathe.html">Quick Breathing Session</a>
+          <p id="calmTip" class="meta-tip">Tip: Begin with one slow breath.</p>
+        </div>
+      </section>
+
+      <section class="snapshot-grid">
+        <article class="snapshot-card glass">
+          <p class="snapshot-label">Journal Entries</p>
+          <p id="snapshotJournalCount" class="snapshot-value">0</p>
+        </article>
+        <article class="snapshot-card glass">
+          <p class="snapshot-label">Mood Logs</p>
+          <p id="snapshotMoodCount" class="snapshot-value">0</p>
+        </article>
+        <article class="snapshot-card glass">
+          <p class="snapshot-label">Recent Mood</p>
+          <p id="snapshotRecentMood" class="snapshot-value">No data</p>
+        </article>
+        <article class="snapshot-card glass">
+          <p class="snapshot-label">Journal Streak</p>
+          <p id="journalStreakDisplay" class="snapshot-value">0 Days</p>
+        </article>
+        <article class="snapshot-card glass">
+          <p class="snapshot-label">Calm Score</p>
+          <p id="snapshotCalmScore" class="snapshot-value">-</p>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <a class="action-card glass" href="mood.html">
+          <span class="action-tag">Track</span>
+          <h2>Log Today's Mood</h2>
+          <p>Pause for a moment and record how you're feeling.</p>
+        </a>
+        <a class="action-card glass" href="journal.html">
+          <span class="action-tag">Reflect</span>
+          <h2>Write Journal Entry</h2>
+          <p>Capture your thoughts in a private reflective space.</p>
+        </a>
+        <a class="action-card glass" href="breathe.html">
+          <span class="action-tag">Reset</span>
+          <h2>Start Breathing Exercise</h2>
+          <p>Reset your focus with a gentle guided rhythm.</p>
+        </a>
+      </section>
+
+      <section class="mindset-grid">
+        <article class="mindset-card quote-card glass">
+          <div class="mindset-head">
+            <h3>Motivational Quote</h3>
+            <button id="nextQuoteBtn" class="small-action-btn" type="button">New Quote</button>
+          </div>
+          <p id="dailyQuote"></p>
+        </article>
+
+        <article class="mindset-card affirmation-card glass">
+          <div class="mindset-head">
+            <h3>Daily Affirmation</h3>
+            <button id="nextAffirmationBtn" class="small-action-btn" type="button">New Affirmation</button>
+          </div>
+          <p id="dailyAffirmation"></p>
+        </article>
+
+        <article class="mindset-card momentum-card glass">
+          <h3>Your Momentum</h3>
+          <p id="moodStreakDisplay" class="streak-display">Mood Streak: 0 Days</p>
+          <p class="momentum-note">Consistency builds confidence. One entry each day is enough.</p>
+        </article>
+      </section>
+
+      <section class="ritual-card glass">
+        <div class="ritual-head">
+          <div>
+            <h3>Daily Focus Ritual</h3>
+            <p>Set 1 to 3 gentle priorities for your day.</p>
+          </div>
+          <p id="focusProgressLabel" class="ritual-progress">0% complete</p>
+        </div>
+
+        <div class="ritual-form">
+          <input id="focusInput" type="text" placeholder="Add a small intention..." />
+          <button id="addFocusItemBtn" class="btn btn-secondary" type="button">Add</button>
+          <button id="clearFocusBtn" class="btn btn-secondary" type="button">Clear</button>
+        </div>
+
+        <ul id="focusList" class="focus-list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
+
+
