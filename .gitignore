@@ -1,3 +1,10 @@
 node_modules/
 .env
 server/local-db.json
+convert-report-to-docx.ps1
+StillSpace_Final_Report.docx
+StillSpace_Final_Report.html
+StillSpace_Final_Report.htm
+~$*.html
+.git-new/
+.git-tmp/

@@ -158,13 +158,18 @@ function initTheme() {
   }
 
   if (!toggle) return;
-  toggle.textContent = document.body.classList.contains("dark") ? "Light" : "Dark";
+  const isDark = document.body.classList.contains("dark");
+  const label = isDark ? "Switch to light mode" : "Switch to dark mode";
+  toggle.setAttribute("aria-label", label);
+  toggle.setAttribute("title", label);
 
   toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
     const currentTheme = document.body.classList.contains("dark") ? "dark" : "light";
     localStorage.setItem("stillspaceTheme", currentTheme);
-    toggle.textContent = currentTheme === "dark" ? "Light" : "Dark";
+    const updatedLabel = currentTheme === "dark" ? "Switch to light mode" : "Switch to dark mode";
+    toggle.setAttribute("aria-label", updatedLabel);
+    toggle.setAttribute("title", updatedLabel);
   });
 }
 
