@@ -1045,6 +1045,10 @@ If usage increases, the following improvements can be made:
 4. How does the dark mode implementation work?
 5. How would you scale this application for many users?
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3b80a05 (Refine report generation and shorten project documentation)
 ## Appendix Q: Expanded Literature Notes
 This appendix adds deeper context from general digital wellness practices. Many wellness tools emphasize habit loops: cue, routine, reward. The cue might be a daily reminder, the routine is the journaling or mood log, and the reward is a gentle summary or affirmation. StillSpace uses soft prompts and a short flow so the routine feels achievable. A short flow increases the chance of repeating the habit daily.
 
@@ -1095,7 +1099,11 @@ Journal streak algorithm uses the same logic but based on journal entry dates. T
 
 AI fallback algorithm walkthrough:
 1. Convert entry to lowercase.
+<<<<<<< HEAD
 2. Search for keywords such as \"stressed\", \"tired\", \"calm\", \"happy\".
+=======
+2. Search for keywords such as "stressed", "tired", "calm", "happy".
+>>>>>>> 3b80a05 (Refine report generation and shorten project documentation)
 3. If a keyword is found, select a matching supportive response.
 4. If none match, return a neutral encouragement.
 5. Always return a short, gentle message without medical advice.
@@ -1186,7 +1194,10 @@ Motion design also plays a role. Subtle animations can create a feeling of smoot
 ### Y.7 Privacy and Trust
 For journaling and mood tracking, privacy is central. Even in a student project, it is important to allow users to delete their account and remove data. StillSpace provides this feature in the profile page. In real-world use, stronger security would be required, but the project demonstrates awareness of privacy principles.
 
+<<<<<<< HEAD
 ---
+=======
+>>>>>>> 3b80a05 (Refine report generation and shorten project documentation)
 ## Appendix Z: Detailed System Design and Data Flow Notes
 This appendix expands the system design section with more detailed narrative.
 
@@ -1228,6 +1239,7 @@ The AI reflection flow includes:
 5. Server returns a short reflection.
 
 This flow ensures the UI always shows a response, which improves reliability and user trust.
+<<<<<<< HEAD
 
 ---
 ## Appendix AA: Detailed Implementation Walkthrough
@@ -1640,5 +1652,7 @@ Test 5: Delete journal entry
 
 The extended test cases demonstrate that both happy paths and error conditions were verified. This supports confidence in the stability of the application for an academic project.
 
+=======
+>>>>>>> 3b80a05 (Refine report generation and shorten project documentation)
 ---
 End of Document
